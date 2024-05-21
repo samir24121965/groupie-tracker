@@ -1,0 +1,56 @@
+<!-- Main -->
+{{define "main"}}
+    {{range .}}
+        <div class="details">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="">{{.Name}}</th>
+                        <th class="">Members</th>
+                        <th class="">Creation Date</th>
+                        <th class="">First Album</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class=""><img src="{{.Image}}" alt="{{.Name}}" title="{{.Name}}" /></td>
+                        <td>
+                            <ul class="">
+                                {{range .Members}}
+                                <li class="">{{.}}</li>
+                                {{end}}
+                            </ul>
+                        </td>
+                        <td>{{.CreationDate}}</td>
+                        <td>{{.FirstAlbum}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="concert">Upcoming <span class="">&laquo;{{.Name}}&raquo;</span> concerts</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="">Country</th>
+                        <th class="">City</th>
+                        <th class="">Dates</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{range .Concerts}}
+                    <tr>
+                        <th>{{.Country}}</th>
+                        <th>{{.City}}</th>
+                        <td>
+                            <ul class="">
+                            {{range .Dates}}
+                                <li class="">{{.}}</li>
+                            {{end}}
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+                {{end}}
+            </table>
+        </div>
+    {{end}}
+{{end}}

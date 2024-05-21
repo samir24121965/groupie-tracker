@@ -1,0 +1,41 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit:wght@200&display=swap" rel="stylesheet">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/img/favicon.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/templates/css/style.css">
+    
+    <title>Groupie Tracker</title> 
+</head>
+<body>
+    <!-- Header-->
+    <header>
+        <h1>GROUPIE TRACKER</h1>
+    </header>
+
+    <!-- Main -->
+    <main>
+        {{template "main" .}}
+    </main>
+   
+    <!-- Footer -->
+    <footer class="footer">
+           <h4> © Copyright 2022 - Corentin - Hamza - Samir. Tous droits réservés</h4>
+    </footer>
+    <!-- JS -->
+    <script src="/templates/js/search.js"></script>
+</body>
+</html>
+{{end}}

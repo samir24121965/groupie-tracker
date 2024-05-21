@@ -1,0 +1,42 @@
+{{define "search"}}
+<div class="search">
+    <label for="">Name</label>
+    <input class="form-control" id="search-input" type="search" list = "search-artist" placeholder="Search" size="30">
+    <datalist id = "search-artist">
+    </datalist>
+</div>
+
+<div class="search">
+    <label for="" >Creation start <span id="valueStart">1950</span></label>
+    <input type="range" min="1950" max="2022" value="1950" id="creationdatestart" oninput="valueStart.innerText = this.value">
+    <label for="" >Creation end <span id="valueEnd">2022</span></label>
+    <input type="range" min="1950" max="2022" value="2022" id="creationdateend" oninput="valueEnd.innerText = this.value">
+</div>
+<div class="search">
+    <label for="" >First album start <span id="valueAlbumStart">1950</span></label>
+    <input type="range" min="1950" max="2022" value="1950" id="firstalbumstart" oninput="valueAlbumStart.innerText = this.value">
+    <label for="" >First album end <span id="valueAlbumEnd">2022</span></label>
+    <input type="range" min="1950" max="2022" value="2022" id="firstalbumend" oninput="valueAlbumEnd.innerText = this.value">
+</div>
+<div class="search">    
+    <label for="">Members</label>
+    <input type="checkbox" name="members" id="allmembers" value="0" checked>
+    <label for="all" >All</label>
+    <input type="checkbox" name="members" id="one" value="1" checked>
+    <label for="one">1</label>
+    <input type="checkbox" name="members" id="two" value="2" checked> 
+    <label for="two">2</label>
+    <input type="checkbox" name="members" id="three" value="3" checked>
+    <label for="three">3</label>
+    <input type="checkbox" name="members" id="four" value="4" checked>
+    <label for="four">4</label>
+    <input type="checkbox" name="members" id="five" value="5" checked>
+    <label for="five">5</label>
+    <input type="checkbox" name="members" id="six" value="6" checked>
+    <label for="six">6</label>
+    <input type="checkbox" name="members" id="seven" value="7" checked>
+    <label for="seven">7</label>
+    <input type="checkbox" name="members" id="eight" value="8" checked>
+    <label for="eight">8</label>
+</div>
+{{end}}
